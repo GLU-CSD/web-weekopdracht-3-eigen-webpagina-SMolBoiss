@@ -1,21 +1,21 @@
 {
   "name": "cookie-clicker-game",
   "version": "1.0.0",
-  "description": "A simple cookie clicker game.",
-  "main": "src/js/main.js",
+  "description": "A simple Cookie Clicker game built with Phaser.",
+  "main": "src/assets/js/game.js",
   "scripts": {
-    "start": "live-server src",
-    "build": "echo 'Build step not defined yet.'"
+    "start": "live-server src"
   },
+  "dependencies": {
+    "phaser": "^3.55.2"
+  },
+  "devDependencies": {},
   "keywords": [
     "cookie",
     "clicker",
-    "game"
+    "game",
+    "phaser"
   ],
   "author": "Your Name",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+  "license": "MIT"
 }

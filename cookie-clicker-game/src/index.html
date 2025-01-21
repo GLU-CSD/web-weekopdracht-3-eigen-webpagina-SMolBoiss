@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watermelon Clicker Game</title>
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/main.js"></script>
+    <title>Cookie Clicker Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1>Watermelon Clicker Game</h1>
-    <div id="game">
-        <button id="watermelon-button">🍉 Click me!</button>
-        <div id="score">Score: 0</div>
-        <button id="upgrade-button">Upgrade (Cost: 10)</button>
-        <div id="upgrades">Upgrades: 0</div>
+    <div id="container">
+        <div id="game-container"></div>
+        <div id="store-container">
+            <h1>Store</h1>
+            <div id="upgrade-container">
+                <p id="upgrade1">Upgrade 1 (Cost: 50)</p>
+                <p id="upgrade2">Upgrade 2</p>
+                <!-- Add more upgrades as needed -->
+            </div>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <script src="assets/js/game.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Cookie Clicker Game
 
-This is a simple cookie clicker game built with HTML, CSS, and JavaScript. The objective of the game is to click on the cookie to earn points and purchase upgrades to increase your cookie production.
+This is a simple Cookie Clicker game built using Phaser. The objective of the game is to click on the cookie to earn points and unlock upgrades.
 
 ## Project Structure
 
@@ -8,11 +8,12 @@ This is a simple cookie clicker game built with HTML, CSS, and JavaScript. The o
 cookie-clicker-game
 ├── src
 │   ├── assets
-│   │   └── favicon.png
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   └── main.js
+│   │   ├── css
+│   │   │   └── styles.css
+│   │   ├── js
+│   │   │   └── game.js
+│   │   └── images
+│   │       └── cookie.png
 │   └── index.html
 ├── package.json
 └── README.md
@@ -22,29 +23,30 @@ cookie-clicker-game
 
 To run the game locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```
    git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```
    cd cookie-clicker-game
    ```
 
-3. Open `src/index.html` in your web browser to start playing.
+2. **Install dependencies:**
+   ```
+   npm install
+   ```
+
+3. **Open the game:**
+   Open `src/index.html` in your web browser.
 
 ## Features
 
 - Click on the cookie to earn points.
-- Purchase upgrades to increase cookie production.
-- Responsive design for various screen sizes.
+- Upgrade your clicking power.
+- Simple and engaging gameplay.
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- Phaser: A fast, robust, and versatile game framework.
+- HTML/CSS: For structuring and styling the game interface.
 
 ## License
 
