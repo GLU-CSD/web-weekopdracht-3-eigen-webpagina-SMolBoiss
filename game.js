@@ -135,7 +135,7 @@ function create() {
     needle = this.add.image(depthGauge.x, depthGauge.y - depthGauge.displayHeight / 2, 'needle');
     needle.setOrigin(0.9, 0.9);  // Set origin to the center
     needle.setScale(0.35);
-    needle.angle = startingangle;  // Set the starting angle of the needle to 45 degrees
+    needle.angle = startingangle;  
 
     // Create a container for the UI elements
     uiContainer = this.add.container(0, 0);
@@ -143,7 +143,7 @@ function create() {
 
     // Add event listener for window resize
     window.addEventListener('resize', resizeGame);
-    resizeGame();  // Call it once to set the initial size
+    resizeGame();  
 
     // Initialize bubbles group
     bubbles = this.add.group();
@@ -152,7 +152,7 @@ function create() {
     const resetButton = this.add.image(50, config.height - 50, 'resetButton')
         .setInteractive()
         .on('pointerdown', showResetConfirmation);
-    resetButton.setScale(0.15); // Adjust the scale as needed
+    resetButton.setScale(0.15); 
 
     // Create confirmation dialog
     const confirmDialog = this.add.container(config.width / 2, config.height / 2);
@@ -197,8 +197,8 @@ function create() {
     this.physics.add.existing(submarine);
 
     // Define the new width and height for the hitbox
-    const newWidth = submarine.width * 0.5; // 50% of the original width
-    const newHeight = submarine.height * 0.2; // 50% of the original height
+    const newWidth = submarine.width * 0.5; 
+    const newHeight = submarine.height * 0.2; 
 
     // Adjust the hitbox size
     submarine.body.setSize(newWidth, newHeight);
@@ -234,7 +234,7 @@ function update(time, delta) {
     localStorage.setItem('gameState', JSON.stringify({ depth, money, moneyPerSec, upgradeCost,depthUpgradeCost }));
 
     // Earn money over time based on money per second
-    money += moneyPerSec * (delta / 1000); // delta is in milliseconds, so divide by 1000 to get seconds
+    money += moneyPerSec * (delta / 1000); 
 
     // Update displays
     depthText.setText(`Depth: ${Math.floor(depth)} meters`);
@@ -243,10 +243,9 @@ function update(time, delta) {
     depthUpgradeText.setText(`Upgrade Depth: ${depthUpgradeCost} coins`);
 
     // Darken the background color as the depth increases
-    const blueComponent = Math.max(0, Math.floor(200 - (depth * 0.0002)));  // Start with blue and decrease over time
-    const greenComponent = Math.max(0, Math.floor(128 - (depth * 0.0001))); // Add a green component to make it more ocean blue
-    background.setFillStyle(Phaser.Display.Color.GetColor(0, greenComponent, blueComponent));  // Darker ocean blue shade
-
+    const blueComponent = Math.max(0, Math.floor(200 - (depth * 0.0002)));  
+    const greenComponent = Math.max(0, Math.floor(128 - (depth * 0.0001))); 
+    background.setFillStyle(Phaser.Display.Color.GetColor(0, greenComponent, blueComponent));  
     // Increase the alpha of the overlay to make the background look darker
     const overlayAlpha = Math.min(0.8, depth * 0.0007);  // Increase alpha based on depth, capped at 0.8
     overlay.clear();
@@ -260,7 +259,7 @@ function update(time, delta) {
     // Update lightCone position to follow the submarine
     lightCone.x = submarine.x + 90;
     lightCone.y = submarine.y - 9;
-    lightCone.setScale(2); // Adjust the scale as needed
+    lightCone.setScale(2); 
 
     // Apply flicker effect based on depth
     if (Math.random() < 0.6) { // 10% chance to flicker
@@ -275,7 +274,7 @@ function update(time, delta) {
     }
 
     // Change the angle of the needle
-    needle.angle = depth * 0.0019 + startingangle;  // Example: rotate based on depth
+    needle.angle = depth * 0.0019 + startingangle; 
 
     // Move bubbles upwards
     bubbles.getChildren().forEach((bubble, index) => {
